@@ -1,0 +1,296 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+@font-face {
+    font-family: 'Western-Cowboys';
+    src: url('./fonts/Western Cowboys.otf') format('truetype');
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+.navbar {
+    max-width: 1200px;
+}
+
+header img {
+    height: 50px;
+}
+
+header h1 {
+    margin-left: 10px;
+    font-family: 'Western-Cowboys', sans-serif;
+    font-weight: 500;
+}
+
+.container.navbar.navbar-expand-lg h1 {
+    margin-top: 10px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff;
+}
+.nav-link {
+    text-align: center;
+}
+
+a.nav-link  {
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #F8C60C;
+}
+
+a.nav-link:hover {
+    color: #fff;
+}
+
+section {
+    /* background-color: #f6f4f4; */
+    padding-top: 20px;
+    margin-bottom: 35px;
+}
+
+.container.navbar.navbar-expand-lg {
+    max-width: 1100px;
+    align-items: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgb(10 62 6 / 50%);
+    height: 80px;
+    color: #fff;
+    text-align: center;
+}
+
+
+.container {
+    max-width: 1200px;
+}
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center center;
+    transform: scale(1);
+}
+
+.carousel-inner #cuscuz img {
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.produtos {
+    height: 900px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+h2 {
+    padding: 74px 0px 25px 0px;
+    font-weight: 700;
+}
+
+.produtos h1 {
+    margin: 30px 30px;
+}
+
+.card {
+    width: 15rem;   
+}
+
+
+.card img {
+    height: 150px;
+    object-fit: cover;
+}
+
+
+.row {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-areas: "card card card";
+    text-align: center;
+    column-gap: normal;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+#promocoes .container {
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 255px 230px 230px 230px;
+    grid-template-areas:
+    "img-side item item item "
+    "img-side item item item ";
+    gap: 10px;
+}
+
+.img-side {
+    grid-row: img-side;
+}
+
+#img-side img {
+    width: auto;
+    height: 400px;
+    cursor: pointer;
+}
+
+
+.item img {
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    cursor: pointer;
+    object-fit: fill;
+}
+
+.item img:hover,
+#img-side img:hover {
+    transform: scale(1.02);
+}
+
+#promocoes h2 {
+    padding-top: 60px;
+}
+
+form button {
+    margin-top: 24px;
+}
+
+footer {
+    background-color: #7E987C;
+    color: #ecf0f1;
+    padding: 16px 0;
+    text-align: center;
+}
+
+footer p {
+    padding-bottom: 0;
+}
+
+.btn-primary {
+    background-color: #F8C60C;
+    border: #F8C60C;
+}
+
+.btn-primary:hover {
+    background-color: #d8b842;
+}
+
+
+@media (max-width: 1100px){
+    .row {
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-areas: "card card card";
+        text-align: center;
+        column-gap: normal;
+        row-gap: 15px;
+    }
+
+
+    #promocoes .container {
+        display: grid;
+        /* grid-template-columns: 255px 230px 230px 230px; */
+        grid-template-columns: 233px 209px 212px 200px;
+        grid-template-areas: "img-side item item item "
+                             "img-side item item item " 
+                             "img-side item item item "  
+        ;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 850px){
+    .row {
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-areas: "card card";
+        text-align: center;
+        column-gap: normal;
+        row-gap: 15px;
+    }
+
+    header h1 {
+        margin-left: 30px;
+    }
+
+    /* section {
+        width: 100vw;
+        justify-content: center;
+    } */
+
+    #promocoes .container {
+        display: grid;
+        /* width: 100vw; */
+        grid-template-columns: 255px 206px 230px ;
+        grid-template-areas: "img-side item item "
+                             "img-side item item " 
+                             "img-side item item " 
+                             
+        ;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 750px){
+    #promocoes .container {
+        display: grid;
+        /* width: 100vw; */
+        grid-template-columns: 255px 206px;
+        grid-template-areas: "img-side item"
+                             "img-side item" 
+                             
+                             
+        ;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 550px){
+
+    .container {
+        text-align: center;
+    }
+
+    .produtos {
+        height: auto;
+    }
+    .row {
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-areas: "card";
+        text-align: center;
+        grid-gap: 20px;
+    }
+
+    #promocoes .container {
+        display: block;
+        text-align: center;
+    }
+
+    #promocoes .container img {
+        margin-bottom: 20px;
+        width: 200px;
+    }
+}
